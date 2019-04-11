@@ -6,7 +6,7 @@ import java.awt.*;
 public class CurrentConditionDisplay implements Observer {
 
     private JFrame frame;
-    private JTextArea weatherArea, oceanArea;
+    private JTextArea weatherArea, oceanArea ;
 
     public CurrentConditionDisplay() {
         frame = new JFrame();
@@ -14,6 +14,8 @@ public class CurrentConditionDisplay implements Observer {
         frame.setTitle("Current Condition");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);
 
         weatherArea = new JTextArea(200, 200);
         weatherArea.setBackground(Color.PINK);
@@ -45,5 +47,7 @@ public class CurrentConditionDisplay implements Observer {
             oceanArea.append("Wave Height = " + oceanData.getWaveHeight() + "\n");
             oceanArea.append("Wind = " + oceanData.getWindGust() + "\n");
         }
+
+
     }
 }

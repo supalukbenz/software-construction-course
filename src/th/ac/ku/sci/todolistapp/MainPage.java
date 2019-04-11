@@ -108,18 +108,18 @@ public class MainPage {
                         this.detailUpdateTextArea.setText(newValue.getDetail());
                         if(newValue.getStart()!=null){
                             this.startUpdateCheckBox.setSelected(true);
-                            this.startUpdateDatePicker.setValue(
-                                    LocalDate.ofInstant(newValue.getStart().toInstant(),
-                                            ZoneId.systemDefault()));
+//                            this.startUpdateDatePicker.setValue(
+//                                    LocalDate.ofInstant(newValue.getStart().toInstant(),
+//                                            ZoneId.systemDefault()));
                         }else {
                             this.startUpdateCheckBox.setSelected(false);
                             this.startUpdateDatePicker.setValue(null);
                         }
                         if(newValue.getEnd()!=null){
                             this.endUpdateCheckBox.setSelected(true);
-                            this.endUpdateDatePicker.setValue(
-                                    LocalDate.ofInstant(newValue.getEnd().toInstant(),
-                                            ZoneId.systemDefault()));
+//                            this.endUpdateDatePicker.setValue(
+//                                    LocalDate.ofInstant(newValue.getEnd().toInstant(),
+//                                            ZoneId.systemDefault()));
                         }else {
                             this.endUpdateCheckBox.setSelected(false);
                             this.endUpdateDatePicker.setValue(null);

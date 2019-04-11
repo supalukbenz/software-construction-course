@@ -14,6 +14,8 @@ public class CurrentConditionDisplay implements Observer {
         frame.setTitle("Current Condition");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        frame.setLocation(dim.width/3-frame.getSize().width/3, dim.height/2-frame.getSize().height/2);
 
         area = new JTextArea(150, 150);
         frame.add(area);
